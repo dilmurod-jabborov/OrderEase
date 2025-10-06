@@ -29,7 +29,7 @@ public class CustomerService(
             });
     }
 
-    public async Task UpdateAsync(int id, CustomerUpdateModel model)
+    public async Task UpdateAsync(long id, CustomerUpdateModel model)
     {
         var existCustomer = await customerRepository.SelectAsync(id)
             ?? throw new NotFoundException("You are not registered!");
@@ -43,7 +43,7 @@ public class CustomerService(
         await customerRepository.UpdateAsync(existCustomer);
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(long id)
     {
         var existCustomer = await customerRepository.SelectAsync(id)
             ?? throw new NotFoundException("You are not registered!");
@@ -51,7 +51,7 @@ public class CustomerService(
         await customerRepository.DeleteAsync(existCustomer);
     }
 
-    public async Task<CustomerViewModel> GetByIdAsync(int id)
+    public async Task<CustomerViewModel> GetByIdAsync(long id)
     {
         var customer = await customerRepository.SelectAsync(id)
             ?? throw new NotFoundException("No such user information found!");

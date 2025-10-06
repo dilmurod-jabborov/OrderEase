@@ -5,9 +5,9 @@ namespace OrderEase.Service.Services.Customers;
 public interface ICustomerService
 {
     Task CreateAsync(CustomerCreateModel model);
-    Task UpdateAsync(int id, CustomerUpdateModel model);
-    Task DeleteAsync(int id);
-    Task<CustomerViewModel> GetByIdAsync(int id);
+    Task UpdateAsync(long id, CustomerUpdateModel model);
+    Task DeleteAsync(long id);
+    Task<CustomerViewModel> GetByIdAsync(long id);
     Task<List<CustomerViewModel>> GetAllAsync(
         string? name = null,
         string? phone = null,

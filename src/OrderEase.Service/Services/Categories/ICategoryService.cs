@@ -5,8 +5,8 @@ namespace OrderEase.Service.Services.Categories;
 public interface ICategoryService
 {
     Task CreateAsync(CategoryCreateModels model);
-    Task UpdateAsync(int id, CategoryUpdateModels model);
-    Task DeleteAsync(int id);
-    Task<CategoryViewModels> GetByIdAsync(int id);
+    Task UpdateAsync(long id, CategoryUpdateModels model);
+    Task DeleteAsync(long id);
+    Task<CategoryViewModels> GetByIdAsync(long id);
     Task<List<CategoryViewModels>> GetAllAsync(string? search);
 }

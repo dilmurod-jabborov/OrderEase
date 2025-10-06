@@ -21,7 +21,7 @@ public class CategoryService(
         await categoryRepository.InsertAsync(new Category { Name = model.Name });
     }
 
-    public async Task UpdateAsync(int id, CategoryUpdateModels model)
+    public async Task UpdateAsync(long id, CategoryUpdateModels model)
     {
         var existCategory = await categoryRepository.SelectAsync(id)
             ?? throw new NotFoundException("This category is not found!");
@@ -34,7 +34,7 @@ public class CategoryService(
         await categoryRepository.UpdateAsync(existCategory);
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(long id)
     {
         var existCategory = await categoryRepository.SelectAsync(id)
             ?? throw new NotFoundException("This category is not found!");
@@ -42,7 +42,7 @@ public class CategoryService(
         await categoryRepository.DeleteAsync(existCategory);
     }
 
-    public async Task<CategoryViewModels> GetByIdAsync(int id)
+    public async Task<CategoryViewModels> GetByIdAsync(long id)
     {
         var category = await categoryRepository.SelectAsync(id);
 

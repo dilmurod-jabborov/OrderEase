@@ -6,6 +6,6 @@ public interface IRepository<T>
     Task<T> InsertAsync(T entity);
     Task UpdateAsync(T entity);
     Task DeleteAsync(T entity);
-    Task<T> SelectAsync(int id);
+    Task<T> SelectAsync(long id);
     IQueryable<T> SelectAllAsQueryable();
 }
