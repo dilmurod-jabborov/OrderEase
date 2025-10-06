@@ -12,6 +12,18 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderEase.DataAccess\OrderEase.DataAccess.csproj" />
+    <ProjectReference Include="..\OrderEase.Domain\OrderEase.Domain.csproj" />
+    <ProjectReference Include="..\OrderEase.Service\OrderEase.Service.csproj" />
   </ItemGroup>
 
 </Project>

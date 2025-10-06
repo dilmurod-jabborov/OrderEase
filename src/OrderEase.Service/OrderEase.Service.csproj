@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Customers\Models\" />
+    <Folder Include="Services\Orders\Models\" />
+    <Folder Include="Services\Products\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderEase.DataAccess\OrderEase.DataAccess.csproj" />
+    <ProjectReference Include="..\OrderEase.Domain\OrderEase.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
